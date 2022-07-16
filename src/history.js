@@ -76,12 +76,12 @@ const History = {
     },
 
     onReplaceState () {
-        let blah = this.current().path;
-        let yap = this.router.currentRoute.fullPath;
+        // let blah = this.current().path;
+        // let yap = this.router.currentRoute.fullPath;
 
-        if (this.router && yap === blah) {
+        // if (this.router && yap === blah) {
             this.replaceLastPush()
-        }
+        // }
     },
 
     /**
