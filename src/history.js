@@ -46,6 +46,8 @@ const History = {
         History.ignoreRoutesWithSameName = ignoreRoutesWithSameName || false
         History.registerHistoryEvents()
 
+        console.log("INSTALLED");
+
         Object.defineProperty(Vue.prototype, '$routerHistory', {
             get () { return History }
         })
@@ -63,7 +65,7 @@ const History = {
             }
         }
 
-        console.debug("ASDF");
+        console.log("ASDF");
 
         window.history.replaceState = spy(window.history.replaceState, this.onReplaceState)
 
