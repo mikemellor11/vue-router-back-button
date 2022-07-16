@@ -57,10 +57,13 @@ const History = {
          */
         var spy = function(original, callback) {
             return function () {
+                console.log("REPLACED");
                 callback.apply(History, arguments)
                 return original.apply(this, arguments)
             }
         }
+
+        console.debug("ASDF");
 
         window.history.replaceState = spy(window.history.replaceState, this.onReplaceState)
 
